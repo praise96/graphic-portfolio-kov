@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Praise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        body { background-color: #0a0a0a; color: #ffffff; overflow-x: hidden; }
+        .hero-text { background: linear-gradient(to right, #4f46e5, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.3); }
+        .grid-bg { background-image: radial-gradient(#333 1px, transparent 1px); background-size: 30px 30px; opacity: 0.2; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="fixed inset-0 grid-bg pointer-events-none z-0"></div>
+
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <span class="text-2xl font-bold tracking-tighter">P.</span>
+                <div class="hidden md:block">
+                    <a href="#work" class="ml-10 hover:text-indigo-400 transition">Work</a>
+                    <a href="#about" class="ml-10 hover:text-indigo-400 transition">About</a>
+                    <a href="#contact" class="ml-10 px-4 py-2 bg-white text-black font-bold rounded hover:bg-indigo-400 hover:text-white transition">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative z-10 h-screen flex flex-col justify-center items-center text-center px-4">
+        <h2 class="text-sm md:text-lg text-gray-400 mb-4 tracking-widest uppercase reveal">Graphic Designer & Web Engineer</h2>
+        <h1 class="text-6xl md:text-9xl font-extrabold tracking-tighter mb-6 reveal">
+            CRAFTING <br> <span class="hero-text">DIGITAL CHAOS</span>
+        </h1>
+        <p class="max-w-xl text-gray-400 mb-10 text-lg reveal">
+            I build high-performance visual systems and clean code. Minimal fluff, maximum impact.
+        </p>
+        <a href="#work" class="reveal border border-white/20 px-8 py-3 rounded-full hover:bg-white hover:text-black transition duration-300">
+            View Projects
+        </a>
+    </section>
+
+    <section id="work" class="relative z-10 py-32 px-4 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold mb-16 border-l-4 border-indigo-500 pl-4 project-header">Selected Works</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <div class="project-card group bg-white/5 border border-white/10 rounded-xl overflow-hidden card-hover transition duration-500">
+                <div class="h-64 relative overflow-hidden">
+                    <img src="project1.jpg" alt="Neon Brand Identity" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Neon Brand Identity</h3>
+                    <p class="text-gray-400 text-sm mb-4">Rebranding a tech startup to look aggressive and modern.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full">Branding</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group bg-white/5 border border-white/10 rounded-xl overflow-hidden card-hover transition duration-500 md:mt-16">
+                <div class="h-64 relative overflow-hidden">
+                    <img src="project2.jpg" alt="E-Commerce Redesign" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">E-Commerce Redesign</h3>
+                    <p class="text-gray-400 text-sm mb-4">Boosting conversion rates through minimalist layout.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-500/20 text-green-300 text-xs rounded-full">Web Design</span>
+                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">Figma</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group bg-white/5 border border-white/10 rounded-xl overflow-hidden card-hover transition duration-500">
+                <div class="h-64 relative overflow-hidden">
+                    <img src="project3.jpg" alt="Mechatronics Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Mechatronics Dashboard</h3>
+                    <p class="text-gray-400 text-sm mb-4">Visualizing complex data for hardware systems.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">Data Viz</span>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full">Frontend</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer id="contact" class="relative z-10 py-20 text-center border-t border-white/10">
+        <h2 class="text-5xl font-bold mb-8">Let's work together.</h2>
+        <a href="mailto:your@email.com" class="text-xl text-indigo-400 hover:text-white transition underline decoration-dotted">Get in touch -></a>
+        <p class="mt-12 text-gray-600 text-sm">&copy; 2026 Praise. All rights reserved.</p>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Animation
+        gsap.from(".reveal", {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+        // Projects Stagger Animation
+        gsap.from(".project-card", {
+            scrollTrigger: {
+                trigger: "#work",
+                start: "top 70%",
+            },
+            y: 100,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power2.out"
+        });
+
+        // Header Line Animation
+        gsap.from(".project-header", {
+            scrollTrigger: {
+                trigger: "#work",
+                start: "top 80%",
+            },
+            x: -50,
+            opacity: 0,
+            duration: 1
+        });
+    </script>
+</body>
+</html>
